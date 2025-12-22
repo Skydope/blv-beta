@@ -1,0 +1,141 @@
+---
+const phases = [
+  {
+    phase: "Fase 1",
+    title: "Cimientos Digitales",
+    duration: "Meses 1-6 (2025)",
+    items: [
+      "Identidad Digital Ciudadana",
+      "Infraestructura de Datos Base",
+      "Portal de Trámites Simples",
+      "App Móvil (Beta)",
+      "Interoperabilidad Municipal",
+    ],
+  },
+  {
+    phase: "Fase 2",
+    title: "Servicios Esenciales",
+    duration: "Meses 6-12 (2025)",
+    items: [
+      "Sistema Integrado de Salud (Turnos)",
+      "Gestión de Reclamos y Atención",
+      "Alumbrado Inteligente (Piloto)",
+      "Puntos Wifi Públicos",
+      "Capacitación Digital",
+    ],
+  },
+  {
+    phase: "Fase 3",
+    title: "Ecosistema Comercial",
+    duration: "Año 2 (2026)",
+    items: [
+      "Marketplace Local 'Compre Bolívar'",
+      "Habilitaciones Comerciales 100% Digitales",
+      "Billetera Virtual Municipal",
+      "Incentivos Fiscales Digitales",
+      "Turismo Inteligente",
+    ],
+  },
+  {
+    phase: "Fase 4",
+    title: "Ciudad Sensorizada",
+    duration: "Año 2-3 (2026-2027)",
+    items: [
+      "Centro de Monitoreo IoT",
+      "Semáforos Inteligentes",
+      "Sensores Ambientales",
+      "Telemedicina",
+      "Fiscalización Digital",
+    ],
+  },
+  {
+    phase: "Fase 5",
+    title: "Inteligencia Artificial",
+    duration: "Año 3+ (2027...)",
+    items: [
+      "Gemelo Digital de la Ciudad",
+      "Predicción de Tráfico y Crimen",
+      "Automatización de Procesos",
+      "Blockchain para Licitaciones",
+      "Gobernanza de Datos Abiertos",
+    ],
+  },
+];
+---
+
+<section
+  id="roadmap"
+  class="section-container bg-gradient-to-b from-gray-900 to-gray-950"
+>
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">
+        <span class="gradient-text">Hoja de Ruta 2023-2030</span>
+      </h2>
+      <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+        Implementación escalonada del proyecto en cinco fases estratégicas
+      </p>
+    </div>
+
+    <div class="relative">
+      <div
+        class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-tech-cyan via-tech-blue to-tech-green hidden lg:block"
+      >
+      </div>
+
+      <div class="space-y-12">
+        {
+          phases.map((phase, index) => (
+            <div
+              class={`relative flex flex-col lg:flex-row gap-8 items-center ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"}`}
+            >
+              <div
+                class={`w-full lg:w-5/12 ${index % 2 === 0 ? "lg:text-right" : "lg:text-left"}`}
+              >
+                <div class="glass-effect p-8 rounded-3xl hover:border-tech-cyan/50 transition-all duration-300">
+                  <div class="flex items-center gap-3 mb-4 justify-start lg:justify-between">
+                    <span class="px-4 py-1 bg-gradient-to-r from-tech-cyan to-tech-blue rounded-full text-sm font-bold">
+                      {phase.phase}
+                    </span>
+                    <span class="text-sm text-gray-400">{phase.duration}</span>
+                  </div>
+                  <h3 class="text-2xl font-bold mb-4 text-white">
+                    {phase.title}
+                  </h3>
+                  <ul class="space-y-2">
+                    {phase.items.map((item) => (
+                      <li class="flex items-center gap-2 text-gray-400">
+                        <svg
+                          class="h-4 w-4 text-tech-cyan flex-shrink-0"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div class="hidden lg:flex w-2/12 justify-center">
+                <div class="w-16 h-16 rounded-full bg-gradient-to-br from-tech-cyan via-tech-blue to-tech-green flex items-center justify-center font-bold text-xl z-10 border-4 border-gray-950">
+                  {index + 1}
+                </div>
+              </div>
+
+              <div class="w-full lg:w-5/12" />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

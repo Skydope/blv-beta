@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Bolívar Digital 2030 - Ciudad Inteligente</title>
+		<meta name="description" content="Transformando San Carlos de Bolívar en una ciudad inteligente mediante tecnología innovadora y servicios digitales integrados" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	html {
+		margin: 0;
+		width: 100%;
+		scroll-behavior: smooth;
+		font-family: 'Inter', sans-serif;
+	}
+
+	body {
+		margin: 0;
+		width: 100%;
+		background: #030712;
+		color: #f9fafb;
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+</style>

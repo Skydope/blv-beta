@@ -1,0 +1,83 @@
+---
+---
+
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <div class="flex items-center">
+        <a href="#hero" class="text-xl font-bold gradient-text">
+          Bolívar Digital 2030
+        </a>
+      </div>
+
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#vision" class="text-gray-300 hover:text-tech-cyan transition-colors">Visión</a>
+        <a href="#modules" class="text-gray-300 hover:text-tech-cyan transition-colors">Módulos</a>
+        <a href="#kpis" class="text-gray-300 hover:text-tech-cyan transition-colors">KPIs</a>
+        <a href="#tech-stack" class="text-gray-300 hover:text-tech-cyan transition-colors">Tecnología</a>
+        <a href="#roadmap" class="text-gray-300 hover:text-tech-cyan transition-colors">Roadmap</a>
+        <button id="explorarBtnNav" class="bg-gradient-to-r from-tech-cyan to-tech-blue text-white px-6 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform">
+          Explorar Proyecto
+        </button>
+      </div>
+
+      <button id="mobileMenuBtn" class="md:hidden text-gray-300 hover:text-white">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden glass-effect">
+    <div class="px-4 pt-2 pb-4 space-y-3">
+      <a href="#vision" class="block text-gray-300 hover:text-tech-cyan transition-colors py-2">Visión</a>
+      <a href="#modules" class="block text-gray-300 hover:text-tech-cyan transition-colors py-2">Módulos</a>
+      <a href="#kpis" class="block text-gray-300 hover:text-tech-cyan transition-colors py-2">KPIs</a>
+      <a href="#tech-stack" class="block text-gray-300 hover:text-tech-cyan transition-colors py-2">Tecnología</a>
+      <a href="#roadmap" class="block text-gray-300 hover:text-tech-cyan transition-colors py-2">Roadmap</a>
+      <button id="explorarBtnMobile" class="w-full bg-gradient-to-r from-tech-cyan to-tech-blue text-white px-6 py-2 rounded-full text-sm font-semibold mt-2">
+        Explorar Proyecto
+      </button>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const explorarBtnNav = document.getElementById('explorarBtnNav');
+  const explorarBtnMobile = document.getElementById('explorarBtnMobile');
+  const modal = document.getElementById('fullProjectModal');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      navbar?.classList.add('glass-effect', 'shadow-lg');
+    } else {
+      navbar?.classList.remove('glass-effect', 'shadow-lg');
+    }
+  });
+
+  mobileMenuBtn?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', (e) => {
+      e.preventDefault();
+      mobileMenu?.classList.add('hidden');
+      const target = document.querySelector(anchor.getAttribute('href') as string);
+      target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  function openModal() {
+    modal?.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+    mobileMenu?.classList.add('hidden');
+  }
+
+  explorarBtnNav?.addEventListener('click', openModal);
+  explorarBtnMobile?.addEventListener('click', openModal);
+</script>

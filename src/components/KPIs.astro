@@ -1,0 +1,22 @@
+---
+import Dashboard from "./Dashboard/Dashboard.jsx";
+---
+
+<section
+  id="kpis"
+  class="section-container bg-gradient-to-b from-gray-950 to-gray-900"
+>
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">
+        <span class="gradient-text">Indicadores Clave de Gestión</span>
+      </h2>
+      <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+        Métricas estratégicas para medir el desempeño y orientar las políticas
+        públicas
+      </p>
+    </div>
+
+    <Dashboard client:only="react" />
+  </div>
+</section>

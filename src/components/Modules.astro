@@ -1,0 +1,97 @@
+---
+const modules = [
+  {
+    title: "Servicios al Ciudadano",
+    icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z",
+    features: ["Trámites digitales", "Turnos online", "Notificaciones automáticas", "Información climática"],
+    color: "cyan"
+  },
+  {
+    title: "Educación",
+    icon: "M12 14l9-5-9-5-9 5 9 5z M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z",
+    features: ["Jardines maternales", "Nivel inicial, primario, secundario", "CRUB - Nivel universitario", "Cursos y capacitaciones"],
+    color: "blue"
+  },
+  {
+    title: "Salud",
+    icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
+    features: ["Turnos médicos", "Campañas de salud", "Calendario de vacunación", "Alertas sanitarias"],
+    color: "green"
+  },
+  {
+    title: "Seguridad",
+    icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
+    features: ["Botón antipánico", "Alertas comunitarias", "Mapas de incidentes", "Sistema de emergencias"],
+    color: "cyan"
+  },
+  {
+    title: "Movilidad y Servicios",
+    icon: "M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7",
+    features: ["Transporte público", "Reclamos geolocalizados", "Alumbrado", "Recolección de residuos"],
+    color: "blue"
+  },
+  {
+    title: "Turismo y Cultura",
+    icon: "M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064",
+    features: ["Agenda de eventos", "Rutas turísticas", "Promoción cultural", "Guías interactivas"],
+    color: "green"
+  },
+  {
+    title: "Comercio e Inversión",
+    icon: "M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z",
+    features: ["Catálogo de comercios", "Documentación para emprendedores", "Info para inversores", "Indicadores económicos"],
+    color: "cyan"
+  },
+  {
+    title: "Big Data y Analítica",
+    icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
+    features: ["Data Lake municipal", "Dashboards en tiempo real", "Modelos predictivos", "Análisis de gestión"],
+    color: "blue"
+  }
+];
+
+const getColorClass = (color: string) => {
+  const colors: Record<string, string> = {
+    cyan: "from-tech-cyan to-tech-blue",
+    blue: "from-tech-blue to-tech-green",
+    green: "from-tech-green to-tech-cyan"
+  };
+  return colors[color] || colors.cyan;
+};
+---
+
+<section id="modules" class="section-container">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">
+        <span class="gradient-text">Módulos del Ecosistema</span>
+      </h2>
+      <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+        Una plataforma integral que abarca todas las áreas estratégicas de la gestión municipal
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {modules.map((module) => (
+        <div class="glass-effect p-6 rounded-2xl hover:border-tech-cyan/50 transition-all duration-300 group">
+          <div class={`w-14 h-14 bg-gradient-to-br ${getColorClass(module.color)} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={module.icon} />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold mb-3 text-white">{module.title}</h3>
+          <ul class="space-y-2">
+            {module.features.map((feature) => (
+              <li class="flex items-start gap-2 text-sm text-gray-400">
+                <svg class="h-5 w-5 text-tech-cyan flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>{feature}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
