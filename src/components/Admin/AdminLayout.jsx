@@ -10,7 +10,7 @@ export default function AdminLayout({ children }) {
         { id: 'general', label: 'Visión General', icon: LayoutDashboard },
         { id: 'security', label: 'Seguridad', icon: Shield },
         { id: 'health', label: 'Salud', icon: Activity },
-        { id: 'transport', label: 'Movilidad', icon: Truck },
+        { id: 'services', label: 'Servicios', icon: Truck },
         { id: 'environment', label: 'Ambiente', icon: Trees },
         { id: 'citizens', label: 'Ciudadanos', icon: Users },
     ];

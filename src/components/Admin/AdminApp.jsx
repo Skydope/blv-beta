@@ -1,8 +1,11 @@
 import React from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 import AdminLayout from './AdminLayout';
 import Overview from './Widgets/Overview';
 import SecurityWidget from './Widgets/SecurityWidget';
 import HealthWidget from './Widgets/HealthWidget';
+import ServicesWidget from './Widgets/ServicesWidget';
+import EnvironmentWidget from './Widgets/EnvironmentWidget';
 
 // Preliminary placeholder components for other tabs
 const Placeholder = ({ title }) => (
@@ -15,12 +18,8 @@ const Placeholder = ({ title }) => (
 );
 
 export default function AdminApp() {
-    // Logic to render active tab content
-    // Since AdminLayout uses React.Children mapping, we create a wrapper
-    // that accepts activeTab prop injected by Layout
-
     return (
-        <div className="admin-app-root">
+        <div className="admin-app-root h-full">
             <AdminLayout>
                 <ContentSwitcher />
             </AdminLayout>
@@ -29,13 +28,29 @@ export default function AdminApp() {
 }
 
 function ContentSwitcher({ activeTab }) {
-    switch (activeTab) {
-        case 'general': return <Overview />;
-        case 'security': return <SecurityWidget />;
-        case 'health': return <HealthWidget />;
-        case 'transport': return <Placeholder title="Movilidad Urbana" />;
-        case 'environment': return <Placeholder title="Monitoreo Ambiental" />;
-        case 'citizens': return <Placeholder title="Base Ciudadana" />;
-        default: return <Overview />;
-    }
+    const content = () => {
+        switch (activeTab) {
+            case 'general': return <Overview />;
+            case 'security': return <SecurityWidget />;
+            case 'health': return <HealthWidget />;
+            case 'services': return <ServicesWidget />;
+            case 'environment': return <EnvironmentWidget />;
+            case 'citizens': return <Placeholder title="Base Ciudadana" />;
+            default: return <Overview />;
+        }
+    };
+
+    return (
+        <AnimatePresence mode="wait">
+            <motion.div
+                key={activeTab}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.2 }}
+            >
+                {content()}
+            </motion.div>
+        </AnimatePresence>
+    );
 }
