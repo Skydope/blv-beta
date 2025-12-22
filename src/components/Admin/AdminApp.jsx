@@ -7,6 +7,8 @@ import HealthWidget from './Widgets/HealthWidget';
 import ServicesWidget from './Widgets/ServicesWidget';
 import EnvironmentWidget from './Widgets/EnvironmentWidget';
 
+import CitizensWidget from './Widgets/CitizensWidget';
+
 // Preliminary placeholder components for other tabs
 const Placeholder = ({ title }) => (
     <div className="flex items-center justify-center h-96 text-gray-500">
@@ -35,7 +37,7 @@ function ContentSwitcher({ activeTab }) {
             case 'health': return <HealthWidget />;
             case 'services': return <ServicesWidget />;
             case 'environment': return <EnvironmentWidget />;
-            case 'citizens': return <Placeholder title="Base Ciudadana" />;
+            case 'citizens': return <CitizensWidget />;
             default: return <Overview />;
         }
     };
