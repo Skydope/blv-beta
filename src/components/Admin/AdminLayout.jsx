@@ -59,7 +59,7 @@ export default function AdminLayout({ children }) {
                                 A
                             </div>
                             <div className="overflow-hidden">
-                                <p className="text-sm font-medium truncate">Augusto Admin</p>
+                                <p className="text-sm font-medium truncate">Administrador</p>
                                 <p className="text-xs text-gray-500 truncate">Intendencia</p>
                             </div>
                         </div>
