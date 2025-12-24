@@ -1,34 +1,61 @@
 ---
+
 ---
 
 <div id="fullProjectModal" class="fixed inset-0 z-50 hidden">
-  <div class="fixed inset-0 bg-black/80 backdrop-blur-sm" id="modalBackdrop"></div>
+  <div class="fixed inset-0 bg-black/80 backdrop-blur-sm" id="modalBackdrop">
+  </div>
 
   <div class="fixed inset-0 overflow-y-auto">
     <div class="min-h-full flex items-center justify-center p-4">
-      <div class="relative w-full max-w-6xl bg-gradient-to-br from-gray-900 to-gray-950 rounded-3xl shadow-2xl border border-white/10 max-h-[90vh] overflow-hidden">
-
-        <div class="sticky top-0 z-10 bg-gray-900/95 backdrop-blur-lg border-b border-white/10 p-6">
+      <div
+        class="relative w-full max-w-6xl bg-gradient-to-br from-gray-900 to-gray-950 rounded-3xl shadow-2xl border border-white/10 max-h-[90vh] overflow-hidden"
+      >
+        <div
+          class="sticky top-0 z-10 bg-gray-900/95 backdrop-blur-lg border-b border-white/10 p-6"
+        >
           <div class="flex items-center justify-between">
             <h2 class="text-3xl font-bold gradient-text">Proyecto Completo</h2>
-            <button id="closeModal" class="text-gray-400 hover:text-white transition-colors">
-              <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            <button
+              id="closeModal"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              <svg
+                class="w-8 h-8"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"></path>
               </svg>
             </button>
           </div>
         </div>
 
-        <div class="p-8 overflow-y-auto max-h-[calc(90vh-100px)] prose prose-invert max-w-none">
-
+        <div
+          class="p-8 overflow-y-auto max-h-[calc(90vh-100px)] prose prose-invert max-w-none"
+        >
           <section class="mb-12">
-            <h2 class="text-3xl font-bold gradient-text mb-6">1. Descripción General y Alineación con Agenda 2030</h2>
+            <h2 class="text-3xl font-bold gradient-text mb-6">
+              1. Descripción General y Alineación con Agenda 2030
+            </h2>
             <p class="text-gray-300 leading-relaxed mb-4">
-              El proyecto <strong class="text-tech-cyan">Bolívar Digital 2030</strong> plantea transformar San Carlos de Bolívar en una <strong>ciudad inteligente</strong> que use tecnologías de la información para ofrecer servicios públicos avanzados y sostenibles.
+              El proyecto <strong class="text-tech-cyan"
+                >Bolívar Digital 2030</strong
+              > plantea transformar San Carlos de Bolívar en una <strong
+                >ciudad inteligente</strong
+              > que use tecnologías de la información para ofrecer servicios públicos
+              avanzados y sostenibles.
             </p>
             <div class="grid md:grid-cols-2 gap-4 my-6">
               <div class="glass-effect p-6 rounded-xl">
-                <h4 class="text-lg font-bold text-tech-cyan mb-3">Ejes Principales</h4>
+                <h4 class="text-lg font-bold text-tech-cyan mb-3">
+                  Ejes Principales
+                </h4>
                 <ul class="space-y-2 text-gray-300">
                   <li>✓ Servicios digitales al ciudadano</li>
                   <li>✓ Educación e inclusión digital</li>
@@ -40,149 +67,288 @@
                 </ul>
               </div>
               <div class="glass-effect p-6 rounded-xl">
-                <h4 class="text-lg font-bold text-tech-blue mb-3">ODS de la ONU</h4>
+                <h4 class="text-lg font-bold text-tech-blue mb-3">
+                  ODS de la ONU
+                </h4>
                 <p class="text-gray-300">
-                  Alineado con el <strong>ODS 11</strong>: Ciudades y comunidades sostenibles, buscando entornos urbanos inclusivos, seguros, resilientes y sostenibles.
+                  Alineado con el <strong>ODS 11</strong>: Ciudades y
+                  comunidades sostenibles, buscando entornos urbanos inclusivos,
+                  seguros, resilientes y sostenibles.
                 </p>
               </div>
             </div>
           </section>
 
           <section class="mb-12">
-            <h2 class="text-3xl font-bold gradient-text mb-6">2. Stack Tecnológico Completo</h2>
+            <h2 class="text-3xl font-bold gradient-text mb-6">
+              2. Stack Tecnológico Completo
+            </h2>
 
             <div class="space-y-6">
               <div class="glass-effect p-6 rounded-xl">
-                <h3 class="text-xl font-bold text-tech-cyan mb-3">Frontend Móvil (React Native)</h3>
+                <h3 class="text-xl font-bold text-tech-cyan mb-3">
+                  Frontend Móvil (Flutter)
+                </h3>
                 <p class="text-gray-300">
-                  La aplicación móvil multiplataforma se desarrollará con React Native, permitiendo cobertura simultánea en Android e iOS con un solo código base, logrando interfaces nativas eficientes y experiencia homogénea al ciudadano.
+                  La aplicación móvil multiplataforma se desarrollará con
+                  Flutter, permitiendo cobertura simultánea en Android e iOS con
+                  un solo código base, logrando interfaces nativas eficientes y
+                  experiencia homogénea al ciudadano.
                 </p>
               </div>
 
               <div class="glass-effect p-6 rounded-xl">
-                <h3 class="text-xl font-bold text-tech-blue mb-3">Backend y Base de Datos (MongoDB)</h3>
+                <h3 class="text-xl font-bold text-tech-blue mb-3">
+                  Backend y Base de Datos (MongoDB)
+                </h3>
                 <p class="text-gray-300">
-                  Se utilizará MongoDB como base de datos NoSQL principal, por su escalabilidad horizontal y flexibilidad al manejar datos heterogéneos. MongoDB fue empleado en plataformas de smart city en Roma y Chicago.
+                  Se utilizará MongoDB como base de datos NoSQL principal, por
+                  su escalabilidad horizontal y flexibilidad al manejar datos
+                  heterogéneos. MongoDB fue empleado en plataformas de smart
+                  city en Roma y Chicago.
                 </p>
               </div>
 
               <div class="glass-effect p-6 rounded-xl">
-                <h3 class="text-xl font-bold text-tech-green mb-3">Arquitectura de Microservicios</h3>
+                <h3 class="text-xl font-bold text-tech-green mb-3">
+                  Arquitectura de Microservicios
+                </h3>
                 <p class="text-gray-300">
-                  Cada dominio funcional (trámites, salud, educación, turismo, reclamos) funcionará como un microservicio independiente. Esto facilita el desarrollo modular, actualizaciones autónomas y escalamiento selectivo.
+                  Cada dominio funcional (trámites, salud, educación, turismo,
+                  reclamos) funcionará como un microservicio independiente. Esto
+                  facilita el desarrollo modular, actualizaciones autónomas y
+                  escalamiento selectivo.
                 </p>
               </div>
 
               <div class="glass-effect p-6 rounded-xl">
-                <h3 class="text-xl font-bold text-tech-cyan mb-3">API Gateway</h3>
+                <h3 class="text-xl font-bold text-tech-cyan mb-3">
+                  API Gateway
+                </h3>
                 <p class="text-gray-300">
-                  Una pasarela de APIs central gestionará el enrutamiento, autenticación y balanceo de carga hacia los microservicios, proporcionando un único punto de control para seguridad y monitoreo.
+                  Una pasarela de APIs central gestionará el enrutamiento,
+                  autenticación y balanceo de carga hacia los microservicios,
+                  proporcionando un único punto de control para seguridad y
+                  monitoreo.
                 </p>
               </div>
 
               <div class="glass-effect p-6 rounded-xl">
-                <h3 class="text-xl font-bold text-tech-blue mb-3">Data Lake Centralizado</h3>
+                <h3 class="text-xl font-bold text-tech-blue mb-3">
+                  Data Lake Centralizado
+                </h3>
                 <p class="text-gray-300">
-                  Se desplegará un Data Lake municipal donde convergerán todos los datos recolectados (trámites, encuestas, sensores, registros sanitarios). Este repositorio permitirá realizar análisis avanzados y Big Data.
+                  Se desplegará un Data Lake municipal donde convergerán todos
+                  los datos recolectados (trámites, encuestas, sensores,
+                  registros sanitarios). Este repositorio permitirá realizar
+                  análisis avanzados y Big Data.
                 </p>
               </div>
 
               <div class="glass-effect p-6 rounded-xl">
-                <h3 class="text-xl font-bold text-tech-green mb-3">Dashboards y Analítica</h3>
+                <h3 class="text-xl font-bold text-tech-green mb-3">
+                  Dashboards y Analítica
+                </h3>
                 <p class="text-gray-300">
-                  Se utilizará <strong>Microsoft Power BI</strong> para reporting corporativo y <strong>Google Sheets</strong> para prototipos de métricas, alimentando la toma de decisiones municipales.
+                  Se utilizará <strong>Microsoft Power BI</strong> para reporting
+                  corporativo y <strong>Google Sheets</strong> para prototipos de
+                  métricas, alimentando la toma de decisiones municipales.
                 </p>
               </div>
             </div>
           </section>
 
           <section class="mb-12">
-            <h2 class="text-3xl font-bold gradient-text mb-6">3. Mapa de KPIs Estratégicos</h2>
+            <h2 class="text-3xl font-bold gradient-text mb-6">
+              3. Mapa de KPIs Estratégicos
+            </h2>
 
             <div class="space-y-6">
               <div class="glass-effect p-6 rounded-xl">
-                <h3 class="text-xl font-bold text-tech-cyan mb-3">KPI A1 - Adopción Digital</h3>
-                <p class="text-gray-300 mb-2"><strong>Fórmula:</strong> (Trámites digitales / Total trámites) × 100</p>
-                <p class="text-gray-400">Mide la penetración de la plataforma digital y orienta campañas de difusión.</p>
+                <h3 class="text-xl font-bold text-tech-cyan mb-3">
+                  KPI A1 - Adopción Digital
+                </h3>
+                <p class="text-gray-300 mb-2">
+                  <strong>Fórmula:</strong> (Trámites digitales / Total trámites)
+                  × 100
+                </p>
+                <p class="text-gray-400">
+                  Mide la penetración de la plataforma digital y orienta
+                  campañas de difusión.
+                </p>
               </div>
 
               <div class="glass-effect p-6 rounded-xl">
-                <h3 class="text-xl font-bold text-tech-blue mb-3">KPI A2 - Experiencia Ciudadana</h3>
-                <p class="text-gray-300 mb-2"><strong>Método:</strong> Promedio ponderado de puntajes (escala 1-5)</p>
-                <p class="text-gray-400">Mide la percepción de calidad y permite ajustar procesos.</p>
+                <h3 class="text-xl font-bold text-tech-blue mb-3">
+                  KPI A2 - Experiencia Ciudadana
+                </h3>
+                <p class="text-gray-300 mb-2">
+                  <strong>Método:</strong> Promedio ponderado de puntajes (escala
+                  1-5)
+                </p>
+                <p class="text-gray-400">
+                  Mide la percepción de calidad y permite ajustar procesos.
+                </p>
               </div>
 
               <div class="glass-effect p-6 rounded-xl">
-                <h3 class="text-xl font-bold text-tech-green mb-3">KPI A3 - Tiempo Ahorrado</h3>
-                <p class="text-gray-300 mb-2"><strong>Método:</strong> Diferencia entre tiempo tradicional y digital</p>
-                <p class="text-gray-400">Refleja eficiencias ganadas y justifica automatizaciones.</p>
+                <h3 class="text-xl font-bold text-tech-green mb-3">
+                  KPI A3 - Tiempo Ahorrado
+                </h3>
+                <p class="text-gray-300 mb-2">
+                  <strong>Método:</strong> Diferencia entre tiempo tradicional y digital
+                </p>
+                <p class="text-gray-400">
+                  Refleja eficiencias ganadas y justifica automatizaciones.
+                </p>
               </div>
 
-              <div class="glass-effect p-6 rounded-xl border border-tech-cyan/30">
-                <h3 class="text-xl font-bold text-tech-cyan mb-4">KPIs de Llamados Ciudadanos (CA)</h3>
+              <div
+                class="glass-effect p-6 rounded-xl border border-tech-cyan/30"
+              >
+                <h3 class="text-xl font-bold text-tech-cyan mb-4">
+                  KPIs de Llamados Ciudadanos (CA)
+                </h3>
                 <div class="space-y-3 text-gray-300">
-                  <p><strong>CA1:</strong> Reclamos activos por tipo (alumbrado, calles, recolección)</p>
-                  <p><strong>CA2:</strong> Reclamos por zona (identifica hotspots urbanos)</p>
-                  <p><strong>CA3:</strong> Tiempo promedio de respuesta (eficiencia operativa)</p>
-                  <p><strong>CA4:</strong> Tasa de solución (calidad del servicio)</p>
+                  <p>
+                    <strong>CA1:</strong> Reclamos activos por tipo (alumbrado, calles,
+                    recolección)
+                  </p>
+                  <p>
+                    <strong>CA2:</strong> Reclamos por zona (identifica hotspots urbanos)
+                  </p>
+                  <p>
+                    <strong>CA3:</strong> Tiempo promedio de respuesta (eficiencia
+                    operativa)
+                  </p>
+                  <p>
+                    <strong>CA4:</strong> Tasa de solución (calidad del servicio)
+                  </p>
                 </div>
               </div>
             </div>
           </section>
 
           <section class="mb-12">
-            <h2 class="text-3xl font-bold gradient-text mb-6">4. Hoja de Ruta (Roadmap) 2023-2026</h2>
+            <h2 class="text-3xl font-bold gradient-text mb-6">
+              4. Hoja de Ruta (Roadmap) 2023-2026
+            </h2>
 
             <div class="space-y-6">
-              <div class="glass-effect p-6 rounded-xl border-l-4 border-tech-cyan">
-                <h3 class="text-xl font-bold text-white mb-3">Fase 1 (Año 1): Diseño e Implementación Inicial</h3>
-                <p class="text-gray-300 mb-3"><strong>T1-T2:</strong> Conformar equipo, definir requerimientos, diseñar arquitectura, lanzar plataforma central básica.</p>
-                <p class="text-gray-300"><strong>T3-T4:</strong> Desarrollar primeros servicios digitales, establecer Data Lake, preparar entrenamiento y campañas.</p>
+              <div
+                class="glass-effect p-6 rounded-xl border-l-4 border-tech-cyan"
+              >
+                <h3 class="text-xl font-bold text-white mb-3">
+                  Fase 1 (Año 1): Diseño e Implementación Inicial
+                </h3>
+                <p class="text-gray-300 mb-3">
+                  <strong>T1-T2:</strong> Conformar equipo, definir requerimientos,
+                  diseñar arquitectura, lanzar plataforma central básica.
+                </p>
+                <p class="text-gray-300">
+                  <strong>T3-T4:</strong> Desarrollar primeros servicios digitales,
+                  establecer Data Lake, preparar entrenamiento y campañas.
+                </p>
               </div>
 
-              <div class="glass-effect p-6 rounded-xl border-l-4 border-tech-blue">
-                <h3 class="text-xl font-bold text-white mb-3">Fase 2 (Año 2): Expansión de Servicios y Datos</h3>
-                <p class="text-gray-300 mb-3"><strong>T1:</strong> Publicar app móvil en producción con nuevos trámites electrónicos.</p>
-                <p class="text-gray-300 mb-3"><strong>T2:</strong> Implementar módulos de Salud, Educación, Seguridad, Movilidad y reclamos geolocalizados.</p>
-                <p class="text-gray-300 mb-3"><strong>T3:</strong> Integrar herramientas de big data y sensores IoT piloto.</p>
-                <p class="text-gray-300"><strong>T4:</strong> Primera evaluación de impacto y ajustes.</p>
+              <div
+                class="glass-effect p-6 rounded-xl border-l-4 border-tech-blue"
+              >
+                <h3 class="text-xl font-bold text-white mb-3">
+                  Fase 2 (Año 2): Expansión de Servicios y Datos
+                </h3>
+                <p class="text-gray-300 mb-3">
+                  <strong>T1:</strong> Publicar app móvil en producción con nuevos
+                  trámites electrónicos.
+                </p>
+                <p class="text-gray-300 mb-3">
+                  <strong>T2:</strong> Implementar módulos de Salud, Educación, Seguridad,
+                  Movilidad y reclamos geolocalizados.
+                </p>
+                <p class="text-gray-300 mb-3">
+                  <strong>T3:</strong> Integrar herramientas de big data y sensores
+                  IoT piloto.
+                </p>
+                <p class="text-gray-300">
+                  <strong>T4:</strong> Primera evaluación de impacto y ajustes.
+                </p>
               </div>
 
-              <div class="glass-effect p-6 rounded-xl border-l-4 border-tech-green">
-                <h3 class="text-xl font-bold text-white mb-3">Fase 3 (Año 3): Consolidación y Mejoras Avanzadas</h3>
-                <p class="text-gray-300 mb-3"><strong>T1:</strong> Ampliar con módulos de Turismo digital y Comercio local. Incorporar IA asistencial.</p>
-                <p class="text-gray-300 mb-3"><strong>T2:</strong> Lanzar portal de Gobierno Abierto y Open Data.</p>
-                <p class="text-gray-300 mb-3"><strong>T3:</strong> Extender alcance con enlaces interoperables.</p>
-                <p class="text-gray-300"><strong>T4:</strong> Informe final y planificación de actualizaciones.</p>
+              <div
+                class="glass-effect p-6 rounded-xl border-l-4 border-tech-green"
+              >
+                <h3 class="text-xl font-bold text-white mb-3">
+                  Fase 3 (Año 3): Consolidación y Mejoras Avanzadas
+                </h3>
+                <p class="text-gray-300 mb-3">
+                  <strong>T1:</strong> Ampliar con módulos de Turismo digital y Comercio
+                  local. Incorporar IA asistencial.
+                </p>
+                <p class="text-gray-300 mb-3">
+                  <strong>T2:</strong> Lanzar portal de Gobierno Abierto y Open Data.
+                </p>
+                <p class="text-gray-300 mb-3">
+                  <strong>T3:</strong> Extender alcance con enlaces interoperables.
+                </p>
+                <p class="text-gray-300">
+                  <strong>T4:</strong> Informe final y planificación de actualizaciones.
+                </p>
               </div>
             </div>
           </section>
 
           <section class="mb-12">
-            <h2 class="text-3xl font-bold gradient-text mb-6">5. Comparación con Tandil y Benchmark Nacional</h2>
+            <h2 class="text-3xl font-bold gradient-text mb-6">
+              5. Comparación con Tandil y Benchmark Nacional
+            </h2>
 
             <div class="glass-effect p-6 rounded-xl mb-6">
-              <h3 class="text-xl font-bold text-tech-cyan mb-4">Experiencia de Tandil</h3>
+              <h3 class="text-xl font-bold text-tech-cyan mb-4">
+                Experiencia de Tandil
+              </h3>
               <ul class="space-y-3 text-gray-300">
-                <li>✓ <strong>Desarrollo local y código abierto:</strong> Registro Único de Proveedores, sistemas de tributos con software libre</li>
-                <li>✓ <strong>Portal de Gobierno Abierto</strong> y Observatorio Vial</li>
-                <li>✓ <strong>Tabi:</strong> Chatbot municipal con IA para más de 30 trámites</li>
-                <li>✓ <strong>GDE:</strong> Gestor documental electrónico que automatizó 50 trámites</li>
+                <li>
+                  ✓ <strong>Desarrollo local y código abierto:</strong> Registro Único
+                  de Proveedores, sistemas de tributos con software libre
+                </li>
+                <li>
+                  ✓ <strong>Portal de Gobierno Abierto</strong> y Observatorio Vial
+                </li>
+                <li>
+                  ✓ <strong>Tabi:</strong> Chatbot municipal con IA para más de 30
+                  trámites
+                </li>
+                <li>
+                  ✓ <strong>GDE:</strong> Gestor documental electrónico que automatizó
+                  50 trámites
+                </li>
               </ul>
             </div>
 
             <div class="glass-effect p-6 rounded-xl">
-              <h3 class="text-xl font-bold text-tech-blue mb-4">Ciudad de Buenos Aires</h3>
+              <h3 class="text-xl font-bold text-tech-blue mb-4">
+                Ciudad de Buenos Aires
+              </h3>
               <ul class="space-y-3 text-gray-300">
-                <li>✓ <strong>Movilidad sustentable:</strong> Metrobús, flota eléctrica, 200 km de ciclovías</li>
-                <li>✓ <strong>Apps turísticas:</strong> BA.Tours e inteligencia turística con Big Data</li>
-                <li>✓ <strong>Redarquía y co-creación</strong> con ONGs y sector privado</li>
+                <li>
+                  ✓ <strong>Movilidad sustentable:</strong> Metrobús, flota eléctrica,
+                  200 km de ciclovías
+                </li>
+                <li>
+                  ✓ <strong>Apps turísticas:</strong> BA.Tours e inteligencia turística
+                  con Big Data
+                </li>
+                <li>
+                  ✓ <strong>Redarquía y co-creación</strong> con ONGs y sector privado
+                </li>
               </ul>
             </div>
           </section>
 
           <section class="mb-12">
-            <h2 class="text-3xl font-bold gradient-text mb-6">6. Impacto Esperado</h2>
+            <h2 class="text-3xl font-bold gradient-text mb-6">
+              6. Impacto Esperado
+            </h2>
 
             <div class="grid md:grid-cols-3 gap-6">
               <div class="glass-effect p-6 rounded-xl">
@@ -196,7 +362,9 @@
               </div>
 
               <div class="glass-effect p-6 rounded-xl">
-                <h3 class="text-lg font-bold text-tech-blue mb-3">Institucional</h3>
+                <h3 class="text-lg font-bold text-tech-blue mb-3">
+                  Institucional
+                </h3>
                 <ul class="space-y-2 text-gray-300 text-sm">
                   <li>• Mayor transparencia</li>
                   <li>• Optimización de procesos</li>
@@ -218,11 +386,15 @@
           </section>
 
           <section class="mb-12">
-            <h2 class="text-3xl font-bold gradient-text mb-6">7. Equipo del Proyecto</h2>
+            <h2 class="text-3xl font-bold gradient-text mb-6">
+              7. Equipo del Proyecto
+            </h2>
 
             <div class="grid md:grid-cols-2 gap-6">
               <div class="glass-effect p-6 rounded-xl">
-                <h3 class="text-xl font-bold text-tech-cyan mb-3">Augusto Marcos Natiello</h3>
+                <h3 class="text-xl font-bold text-tech-cyan mb-3">
+                  Augusto Marcos Natiello
+                </h3>
                 <p class="text-sm text-tech-blue mb-4">Líder de Desarrollo</p>
                 <ul class="space-y-2 text-gray-300 text-sm">
                   <li>• Diseño y coordinación técnica</li>
@@ -233,8 +405,12 @@
               </div>
 
               <div class="glass-effect p-6 rounded-xl">
-                <h3 class="text-xl font-bold text-tech-blue mb-3">Matías Asín</h3>
-                <p class="text-sm text-tech-green mb-4">Líder de Data Science</p>
+                <h3 class="text-xl font-bold text-tech-blue mb-3">
+                  Matías Asín
+                </h3>
+                <p class="text-sm text-tech-green mb-4">
+                  Líder de Data Science
+                </p>
                 <ul class="space-y-2 text-gray-300 text-sm">
                   <li>• Gestión del Data Lake municipal</li>
                   <li>• Integración de datos</li>
@@ -249,14 +425,20 @@
             <h2 class="text-3xl font-bold gradient-text mb-6">8. Conclusión</h2>
             <div class="glass-effect p-8 rounded-xl">
               <p class="text-gray-300 leading-relaxed mb-4">
-                <strong class="text-tech-cyan">Bolívar Digital 2030</strong> es un paso decisivo para convertir al Partido de Bolívar en un <strong>referente de innovación y modernización</strong> en la provincia.
+                <strong class="text-tech-cyan">Bolívar Digital 2030</strong> es un
+                paso decisivo para convertir al Partido de Bolívar en un <strong
+                  >referente de innovación y modernización</strong
+                > en la provincia.
               </p>
               <p class="text-gray-300 leading-relaxed">
-                El proyecto permitirá una ciudad más <strong class="text-tech-blue">eficiente</strong>, <strong class="text-tech-green">transparente</strong> y preparada para el futuro, con una infraestructura digital sólida que potencie el desarrollo económico, educativo y social.
+                El proyecto permitirá una ciudad más <strong
+                  class="text-tech-blue">eficiente</strong
+                >, <strong class="text-tech-green">transparente</strong> y preparada
+                para el futuro, con una infraestructura digital sólida que potencie
+                el desarrollo económico, educativo y social.
               </p>
             </div>
           </section>
-
         </div>
       </div>
     </div>
@@ -264,27 +446,27 @@
 </div>
 
 <script>
-  const modal = document.getElementById('fullProjectModal');
-  const openBtn = document.getElementById('explorarBtn');
-  const closeBtn = document.getElementById('closeModal');
-  const backdrop = document.getElementById('modalBackdrop');
+  const modal = document.getElementById("fullProjectModal");
+  const openBtn = document.getElementById("explorarBtn");
+  const closeBtn = document.getElementById("closeModal");
+  const backdrop = document.getElementById("modalBackdrop");
 
   function openModal() {
-    modal?.classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
+    modal?.classList.remove("hidden");
+    document.body.style.overflow = "hidden";
   }
 
   function closeModal() {
-    modal?.classList.add('hidden');
-    document.body.style.overflow = 'auto';
+    modal?.classList.add("hidden");
+    document.body.style.overflow = "auto";
   }
 
-  openBtn?.addEventListener('click', openModal);
-  closeBtn?.addEventListener('click', closeModal);
-  backdrop?.addEventListener('click', closeModal);
+  openBtn?.addEventListener("click", openModal);
+  closeBtn?.addEventListener("click", closeModal);
+  backdrop?.addEventListener("click", closeModal);
 
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !modal?.classList.contains('hidden')) {
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !modal?.classList.contains("hidden")) {
       closeModal();
     }
   });
